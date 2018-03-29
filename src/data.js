@@ -4,8 +4,8 @@ class Data{
         this.ArrayWebsites = ['http://www.numerama.com/feed', 'https://news.ycombinator.com/rss', 'http://www.jeuxvideo.com/rss/rss.xml'];
         this.HttpsLinks = [];
         this.HttpLinks = [];
-        this.HttpDatas = "";
-        this.HttpsDatas = "";
+        this.HttpDatas = [];
+        this.HttpsDatas = [];
     }
 
     //Fill HttpLinks and HttpsLinks variables depending on the request type
@@ -21,6 +21,13 @@ class Data{
         }
     }
 
+    getHttpDatas() {
+        return this.HttpDatas;
+    }
+    getHttpsDatas() {
+        return this.HttpsDatas;
+    }
+
     getArrayWebsites(){
         return this.ArrayWebsites;
     };
@@ -33,12 +40,12 @@ class Data{
         return this.HttpLinks;
     }
 
-    setHttpData(data) {
-        this.HttpDatas = data;
+    setHttpData(tmp) {
+        this.HttpDatas = tmp;
     }
 
     setHttpsData(data) {
-        this.HttpsDatas = data;
+        this.HttpsDatas = tmp;
     }
 	}
 	
